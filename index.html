@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AxisCoreIT Group LLC | Navigate a Sea of Change</title>
+    <meta
+      name="description"
+      content="AxisCoreIT Group LLC helps organizations navigate technology, operations, intelligence, security, research, AI strategy, and digital transformation."
+    />
+    <link rel="icon" type="image/png" sizes="any" href="assets/axiscoreitlogo.png" />
+    <link rel="apple-touch-icon" href="assets/axiscoreitlogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="AxisCoreIT home">
+        <img class="brand-logo" src="assets/axiscoreitlogo.png" alt="AxisCoreIT Group LLC logo" />
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        data-nav-toggle
+      >
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#mission">Mission</a>
+        <a href="#approach">Approach</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <canvas id="ocean" aria-hidden="true"></canvas>
+        <div class="fog-layer" aria-hidden="true"></div>
+        <svg class="grid-overlay" id="gridSvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+        <div class="sweep" aria-hidden="true">
+          <div class="beam-wide"></div>
+          <div class="beam"></div>
+        </div>
+        <div class="data-points" id="dataPoints" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <img class="hero-logo" src="assets/axiscoreitlogo.png" alt="AxisCoreIT Group LLC logo" />
+          <p class="eyebrow">Technology consulting · AI strategy · Digital transformation</p>
+          <h1>Navigate a Sea of Change. <em>Leverage AI.</em> Build Capability.</h1>
+          <div class="hero-divider"></div>
+          <p class="hero-copy">
+            AxisCoreIT Group LLC helps organizations chart a clear course through complexity, anchored in
+            operations, intelligence, security, research, and practical technology execution.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Chart Your Course</a>
+            <a class="button secondary" href="#services">Our Services</a>
+          </div>
+        </div>
+
+        <div class="stat-row" aria-label="AxisCoreIT operating focus">
+          <div class="stat">
+            <strong>AI-First</strong>
+            <span>Methodology</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <strong>5</strong>
+            <span>Divisions</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <strong>IP-Led</strong>
+            <span>Growth</span>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#services" aria-label="Scroll to services">
+          <span class="scroll-line"></span>
+          <span>Scroll</span>
+        </a>
+        <div class="bottom-strip"></div>
+      </section>
+
+      <section class="intro section">
+        <div class="section-copy">
+          <p class="eyebrow">Where strategy meets execution</p>
+          <h2>Support for teams that need decisions, systems, and vendors to line up.</h2>
+        </div>
+        <div class="intro-grid">
+          <article>
+            <strong>Plan</strong>
+            <p>Define the requirements, risks, and metrics that make a technology initiative worth funding.</p>
+          </article>
+          <article>
+            <strong>Implement</strong>
+            <p>Translate goals into clean reporting, reliable tools, and manageable support workflows.</p>
+          </article>
+          <article>
+            <strong>Improve</strong>
+            <p>Use data and stakeholder feedback to keep systems practical as operations evolve.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mission section" id="mission">
+        <div class="section-copy">
+          <p class="eyebrow">Mission and values</p>
+          <h2>Build capability at the intersection of systems, intelligence, security, and innovation.</h2>
+          <p>
+            AxisCoreIT Group LLC exists to design, implement, and commercialize technology that makes
+            organizations more capable. The company is structured to support consulting, operational systems,
+            AI strategy, business intelligence, cybersecurity, software development, research, product
+            development, strategic partnerships, and education.
+          </p>
+          <a class="button document-button" href="assets/axiscoreit-operating-agreement.pdf" target="_blank" rel="noreferrer">
+            View Operating Agreement
+          </a>
+        </div>
+        <div class="value-grid">
+          <article>
+            <span>01</span>
+            <h3>Operational clarity</h3>
+            <p>Design systems, workflows, and reporting that make complex work easier to manage.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Responsible intelligence</h3>
+            <p>Apply AI, analytics, knowledge management, and governance in ways teams can trust.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Secure capability</h3>
+            <p>Advance technology with risk awareness, cybersecurity discipline, and clear documentation.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Venture-minded innovation</h3>
+            <p>Turn software, research, intellectual property, and partnerships into sustainable growth.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Core services</p>
+          <h2>Focused technology consulting without unnecessary complexity.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon">BI</span>
+            <h3>Business Intelligence</h3>
+            <p>Reporting strategy, KPI dashboards, performance tracking, and data storytelling for leaders.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">DA</span>
+            <h3>Data Analytics</h3>
+            <p>Data cleanup, workflow analysis, trend review, and practical insights from operational systems.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">IT</span>
+            <h3>IT Support</h3>
+            <p>Responsive technical support, documentation, process improvement, and system reliability planning.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">PR</span>
+            <h3>Procurement Support</h3>
+            <p>Technology requirements, vendor evaluation support, statement-of-work inputs, and readiness reviews.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <div class="metric">
+          <strong>Clarity</strong>
+          <span>Readable plans and dashboards that reduce guesswork.</span>
+        </div>
+        <div class="metric">
+          <strong>Alignment</strong>
+          <span>Technology decisions mapped to business, budget, and user needs.</span>
+        </div>
+        <div class="metric">
+          <strong>Momentum</strong>
+          <span>Practical next steps instead of stalled discovery cycles.</span>
+        </div>
+      </section>
+
+      <section class="approach section" id="approach">
+        <div class="section-heading">
+          <p class="eyebrow">How the work moves</p>
+          <h2>A calm, structured process for complicated technology decisions.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Discover</span>
+            <h3>Map the current state</h3>
+            <p>Review systems, data sources, pain points, contract needs, and stakeholder priorities.</p>
+          </article>
+          <article>
+            <span>Design</span>
+            <h3>Shape the solution</h3>
+            <p>Build requirements, reporting models, support workflows, and procurement-ready recommendations.</p>
+          </article>
+          <article>
+            <span>Deliver</span>
+            <h3>Make it usable</h3>
+            <p>Hand off clear documentation, dashboards, vendor guidance, and practical implementation support.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="clients section" id="clients">
+        <div class="section-copy">
+          <p class="eyebrow">Who we support</p>
+          <h2>Built for organizations that need dependable systems and better visibility.</h2>
+          <p>
+            AxisCoreIT is positioned for public-sector teams, small businesses, and operational leaders who need
+            practical IT consulting with the discipline to support procurement and reporting needs.
+          </p>
+        </div>
+        <div class="client-list">
+          <article>
+            <h3>Government and public service teams</h3>
+            <p>Technology planning, reporting, and vendor support for accountability-driven environments.</p>
+          </article>
+          <article>
+            <h3>Small and growing businesses</h3>
+            <p>IT support and analytics guidance that helps lean teams make better use of their tools.</p>
+          </article>
+          <article>
+            <h3>Operations and program leaders</h3>
+            <p>Dashboards, process reviews, and decision support for work that crosses teams and systems.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow">Start with the problem in front of you</p>
+          <h2>Tell us what needs to become clearer, faster, or easier to manage.</h2>
+        </div>
+        <form class="contact-form" action="mailto:info@axiscoreit.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            What do you need help with?
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Inquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="AxisCoreIT home">
+        <img class="brand-logo" src="assets/axiscoreitlogo.png" alt="AxisCoreIT Group LLC logo" />
+      </a>
+      <p>Technology, operations, intelligence, security, research, and business development.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
