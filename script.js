@@ -1,6 +1,18 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const dropdownButtons = document.querySelectorAll("[data-dropdown-toggle]");
+const detailButtons = document.querySelectorAll("[data-modal]");
+const discoverOpen = document.querySelector("[data-discover-open]");
+const discoverModal = document.getElementById("discover-examples-modal");
+const discoverClose = discoverModal?.querySelectorAll("[data-discover-close]");
+const designOpen = document.querySelector("[data-design-open]");
+const designModal = document.getElementById("design-examples-modal");
+const designClose = designModal?.querySelectorAll("[data-design-close]");
+const deliverOpen = document.querySelector("[data-deliver-open]");
+const deliverModal = document.getElementById("deliver-examples-modal");
+const deliverClose = deliverModal?.querySelectorAll("[data-deliver-close]");
+const openModals = new Set();
 
 const updateHeader = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 16);
@@ -26,6 +38,138 @@ nav.addEventListener("click", (event) => {
     nav.classList.remove("is-open");
     header.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+dropdownButtons.forEach((button) => {
+  const dropdownId = button.getAttribute("data-dropdown-toggle");
+  const dropdown = dropdownId ? document.getElementById(dropdownId) : null;
+
+  if (!dropdown) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    const isOpen = dropdown.hidden;
+    dropdown.hidden = !isOpen;
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
+const setupDeliverableModal = (trigger, modal, closeControls) => {
+  if (!trigger || !modal) {
+    return;
+  }
+
+  let lastTrigger = null;
+
+  const openModal = () => {
+    lastTrigger = document.activeElement;
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    trigger.setAttribute("aria-expanded", "true");
+    openModals.add(modal);
+    document.body.style.overflow = "hidden";
+
+    const closeButton = modal.querySelector("button[data-discover-close], button[data-design-close], button[data-deliver-close]");
+    if (closeButton instanceof HTMLElement) {
+      closeButton.focus();
+    }
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    trigger.setAttribute("aria-expanded", "false");
+    openModals.delete(modal);
+    document.body.style.overflow = openModals.size > 0 ? "hidden" : "";
+
+    if (lastTrigger instanceof HTMLElement) {
+      lastTrigger.focus();
+    }
+  };
+
+  trigger.addEventListener("click", openModal);
+  closeControls?.forEach((element) => {
+    element.addEventListener("click", closeModal);
+  });
+
+  return closeModal;
+};
+
+const setupServiceModal = (button) => {
+  const modalId = button.getAttribute("data-modal");
+  const modal = modalId ? document.getElementById(modalId) : null;
+  const closeControls = modal?.querySelectorAll("[data-modal-close]");
+
+  if (!modal) {
+    return null;
+  }
+
+  let lastTrigger = null;
+
+  const openModal = () => {
+    lastTrigger = document.activeElement;
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    button.setAttribute("aria-expanded", "true");
+    openModals.add(modal);
+    document.body.style.overflow = "hidden";
+
+    const closeButton = modal.querySelector("button[data-modal-close]");
+    if (closeButton instanceof HTMLElement) {
+      closeButton.focus();
+    }
+  };
+
+  const closeModal = () => {
+    if (modal.hidden) {
+      return;
+    }
+
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    button.setAttribute("aria-expanded", "false");
+    openModals.delete(modal);
+    document.body.style.overflow = openModals.size > 0 ? "hidden" : "";
+
+    if (lastTrigger instanceof HTMLElement) {
+      lastTrigger.focus();
+    }
+  };
+
+  button.addEventListener("click", openModal);
+  closeControls?.forEach((element) => {
+    element.addEventListener("click", closeModal);
+  });
+
+  return closeModal;
+};
+
+const closeDiscoverModal = setupDeliverableModal(discoverOpen, discoverModal, discoverClose);
+const closeDesignModal = setupDeliverableModal(designOpen, designModal, designClose);
+const closeDeliverModal = setupDeliverableModal(deliverOpen, deliverModal, deliverClose);
+const closeDetailModals = Array.from(detailButtons)
+  .map((button) => setupServiceModal(button))
+  .filter(Boolean);
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (discoverModal && !discoverModal.hidden) {
+      closeDiscoverModal?.();
+    }
+
+    if (designModal && !designModal.hidden) {
+      closeDesignModal?.();
+    }
+
+    if (deliverModal && !deliverModal.hidden) {
+      closeDeliverModal?.();
+    }
+
+    closeDetailModals.forEach((closeModal) => {
+      closeModal?.();
+    });
   }
 });
 
