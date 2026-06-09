@@ -288,6 +288,25 @@ a {
   animation: fadeUp 1s ease 0.6s forwards;
 }
 
+.hero-lighthouse {
+  position: absolute;
+  z-index: 1;
+  top: 44%;
+  left: 50%;
+  width: min(38vw, 360px);
+  max-width: 360px;
+  transform: translate(-50%, -50%);
+  opacity: 0.38;
+  pointer-events: none;
+  filter: drop-shadow(0 0 26px rgba(168, 216, 240, 0.14));
+}
+
+.hero-lighthouse svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .eyebrow {
   margin: 0 0 14px;
   color: var(--gold);
@@ -320,6 +339,8 @@ h1 {
 }
 
 .hero h1 {
+  position: relative;
+  z-index: 2;
   max-width: 760px;
   color: #e8f4fb;
   font-size: clamp(2.1rem, 5vw, 4.4rem);
@@ -525,6 +546,10 @@ h1 {
   padding: clamp(68px, 10vw, 120px) clamp(20px, 5vw, 72px);
 }
 
+section[id] {
+  scroll-margin-top: 260px;
+}
+
 .intro,
 .clients {
   display: grid;
@@ -567,6 +592,33 @@ h1 {
 .intro-grid article,
 .client-list article {
   padding: 26px;
+}
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-card .details-button {
+  margin-top: auto;
+}
+
+.dropdown-panel {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: #7ec8e3;
+}
+
+.dropdown-panel a,
+.dropdown-panel .overview-pdf-button {
+  color: #7ec8e3;
+}
+
+.overview-pdf-button {
+  width: 100%;
 }
 
 .intro-grid strong,
@@ -655,6 +707,33 @@ h1 {
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--paper);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.details-button:hover,
+.details-button:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(14, 124, 134, 0.4);
+  background: #fff;
+  outline: none;
+}
+
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 42px rgba(21, 39, 54, 0.1);
@@ -738,6 +817,63 @@ h1 {
   padding: 30px;
 }
 
+.timeline-card-button {
+  display: block;
+  min-height: 260px;
+  padding: 30px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.timeline-card-button:hover,
+.timeline-card-button:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(21, 39, 54, 0.1);
+  border-color: rgba(14, 124, 134, 0.36);
+  outline: none;
+}
+
+.timeline-kicker,
+.timeline-title,
+.timeline-copy,
+.timeline-action {
+  display: block;
+}
+
+.timeline-kicker {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.timeline-title {
+  margin-top: 54px;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.timeline-copy {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.timeline-action {
+  margin-top: 24px;
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .timeline span {
   color: var(--teal);
   font-size: 0.78rem;
@@ -753,6 +889,127 @@ h1 {
 .timeline p {
   margin: 10px 0 0;
   color: var(--muted);
+}
+
+.deliverable-modal,
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.deliverable-modal[hidden],
+.modal[hidden] {
+  display: none;
+}
+
+.deliverable-modal-backdrop,
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 24, 36, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.deliverable-modal-panel,
+.modal-content {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  max-height: min(88vh, 980px);
+  overflow: auto;
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 249, 0.96));
+  box-shadow: 0 32px 90px rgba(8, 24, 36, 0.28);
+}
+
+.deliverable-modal-close,
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--white);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.modal-content ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.modal-content li + li {
+  margin-top: 10px;
+}
+
+.deliverable-modal-header {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.deliverable-modal-header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.deliverable-modal-header p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.deliverable-examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.deliverable-example {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+}
+
+.deliverable-example-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.deliverable-example-meta span {
+  color: var(--teal);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.deliverable-example-meta strong {
+  font-size: 1rem;
+}
+
+.deliverable-chart {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .contact {
@@ -823,6 +1080,10 @@ textarea {
   .service-grid,
   .timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deliverable-examples {
+    grid-template-columns: 1fr;
   }
 
   .intro,
@@ -896,6 +1157,12 @@ textarea {
     margin-bottom: 14px;
   }
 
+  .hero-lighthouse {
+    top: 46%;
+    width: min(56vw, 250px);
+    opacity: 0.28;
+  }
+
   .hero h1 {
     max-width: 11ch;
     font-size: clamp(2.45rem, 11vw, 3.4rem);
@@ -931,6 +1198,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .timeline-title {
+    margin-top: 36px;
+  }
+
   .hero-panel div {
     min-height: auto;
   }
@@ -962,4 +1233,12 @@ textarea {
   .site-footer p {
     text-align: left;
   }
+}
+.star {
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: .25; }
+  50% { opacity: .55; }
 }

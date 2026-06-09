@@ -58,7 +58,39 @@
         <div class="hero-content">
           <img class="hero-logo" src="assets/axiscoreitlogo.png" alt="AxisCoreIT Group LLC logo" />
           <p class="eyebrow">Technology Consulting · AI Strategy · Digital Transformation</p>
-          <h1>Navigate a Sea of Changes. <em>Leverage AI.</em> Build Capability.</h1>
+          <div class="hero-lighthouse" aria-hidden="true">
+            <svg viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="lighthouseBody" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#eef8ff" stop-opacity="0.48" />
+  <stop offset="45%" stop-color="#9dcde2" stop-opacity="0.42" />
+  <stop offset="100%" stop-color="#1b3d5c" stop-opacity="0.38" />
+</linearGradient>
+                <linearGradient id="lighthouseBeam" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#a8d8f0" stop-opacity="0.0" />
+                  <stop offset="45%" stop-color="#a8d8f0" stop-opacity="0.38" />
+                  <stop offset="100%" stop-color="#a8d8f0" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(110 28)">
+                <path d="M0 0 L76 0 L104 32 L-104 32 Z" fill="url(#lighthouseBeam)" opacity="0.55" />
+                <path d="M0 10 L22 28 L-22 28 Z" fill="#d8eef8" fill-opacity="0.65" />
+              </g>
+              <g id="lighthouse" filter="drop-shadow(0 0 10px rgba(216,238,248,0.25))" transform="translate(110 20)">
+                <path d="M-26 42 H26 L38 272 H-38 Z" fill="url(#lighthouseBody)" />
+                <path d="M-34 38 H34 L26 50 H-26 Z" fill="#d8eef8" fill-opacity="0.24" />
+                <path d="M-18 84 H18 M-20 128 H20 M-22 172 H22 M-24 216 H24" stroke="#d8eef8" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round" />
+                <rect x="-13" y="64" width="26" height="18" rx="5" fill="#d8eef8" fill-opacity="0.2" />
+                <circle cx="0" cy="20" r="10" fill="#d8eef8" fill-opacity="0.3" />
+              </g>
+              <path d="M42 286 C76 276, 144 276, 178 286" fill="none" stroke="#a8d8f0" stroke-opacity="0.22" stroke-width="8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h2>
+            Navigate a Sea of Changes.<br />
+            <em>Leverage AI.</em><br />
+            Build Capability.
+          </h2>
           <div class="hero-divider"></div>
           <p class="hero-copy">
             AxisCoreIT Group LLC helps organizations chart a clear course through technological complexities, anchored in
@@ -75,21 +107,41 @@
 
       <section class="intro section">
         <div class="section-copy">
-          <p class="eyebrow">Where strategy meets execution</p>
-          <h2>Support for teams that need decisions, systems, and vendors to line up.</h2>
+          <p class="eyebrow">Where Strategy Meets Execution</p>
+          <h2>Technology should make work easier, not more complicated.</h2>
+          <p>
+            We help organizations identify opportunities, implement practical solutions, and continuously improve
+            operations through better systems, data, automation, and AI.
+          </p>
+          <p>
+            Whether you're modernizing infrastructure, improving reporting, reducing manual work, or preparing for AI
+            adoption, we provide the guidance and implementation support needed to move forward with confidence.
+          </p>
         </div>
         <div class="intro-grid">
           <article>
             <strong>Plan</strong>
-            <p>Define the requirements, risks, and metrics that make a technology initiative worth funding.</p>
+            <p>Define the requirements, risks, and metrics that make a technology initiative worth investing in.</p>
           </article>
           <article>
             <strong>Implement</strong>
-            <p>Translate goals into clean reporting, reliable tools, and manageable support workflows.</p>
+            <p>Translate goals into clean reporting, reliable tools, as well as management of efficiently supported workflows.</p>
           </article>
           <article>
-            <strong>Improve</strong>
-            <p>Use data and stakeholder feedback to keep systems practical as operations evolve.</p>
+            <strong>Improvements</strong>
+            <p>Use data and stakeholder feedback to keep systems practical as operations evolve and scale.</p>
+          </article>
+          <article class="overview-card">
+            <strong>Company Overview</strong>
+            <p>Open a concise overview of AxisCoreIT Group LLC and its operating focus.</p>
+            <button class="details-button" type="button" data-dropdown-toggle="company-overview-dropdown" aria-expanded="false">
+              View company overview
+            </button>
+            <div class="dropdown-panel" id="company-overview-dropdown" hidden>
+              <a class="button secondary overview-pdf-button" href="assets/AxisCoreIT_Group_Company_Overview.pdf" target="_blank" rel="noreferrer">
+                Open Company Overview PDF
+              </a>
+            </div>
           </article>
         </div>
       </section>
@@ -142,21 +194,25 @@
             <span class="service-icon">BI</span>
             <h3>Business Intelligence</h3>
             <p>Reporting strategy, KPI dashboards, performance tracking, and data storytelling for leaders.</p>
+            <button class="details-button" type="button" data-modal="bi-modal">View details</button>
           </article>
           <article class="service-card">
             <span class="service-icon">DA</span>
             <h3>Data Analytics</h3>
             <p>Data cleanup, workflow analysis, trend review, and practical insights from operational systems.</p>
+            <button class="details-button" type="button" data-modal="da-modal">View details</button>
           </article>
           <article class="service-card">
             <span class="service-icon">IT</span>
             <h3>IT Support</h3>
             <p>Responsive technical support, documentation, process improvement, and system reliability planning.</p>
+            <button class="details-button" type="button" data-modal="it-modal">View details</button>
           </article>
           <article class="service-card">
             <span class="service-icon">PR</span>
             <h3>Procurement Support</h3>
             <p>Technology requirements, vendor evaluation support, statement-of-work inputs, and readiness reviews.</p>
+            <button class="details-button" type="button" data-modal="pr-modal">View details</button>
           </article>
         </div>
       </section>
@@ -182,23 +238,242 @@
           <h2>A calm, structured process for complicated technology decisions.</h2>
         </div>
         <div class="timeline">
-          <article>
-            <span>Discover</span>
-            <h3>Map the current state</h3>
-            <p>Review systems, data sources, pain points, contract needs, and stakeholder priorities.</p>
-          </article>
-          <article>
-            <span>Design</span>
-            <h3>Shape the solution</h3>
-            <p>Build requirements, reporting models, support workflows, and procurement-ready recommendations.</p>
-          </article>
-          <article>
-            <span>Deliver</span>
-            <h3>Make it usable</h3>
-            <p>Hand off clear documentation, dashboards, vendor guidance, and practical implementation support.</p>
-          </article>
+          <button
+            class="timeline-card timeline-card-button"
+            type="button"
+            data-discover-open
+            aria-controls="discover-examples-modal"
+            aria-expanded="false"
+          >
+            <span class="timeline-kicker">Discover</span>
+            <span class="timeline-title">Map the current state</span>
+            <span class="timeline-copy">Review systems, data sources, pain points, contract needs, and stakeholder priorities.</span>
+            <span class="timeline-action">View slide and chart examples</span>
+          </button>
+          <button
+            class="timeline-card timeline-card-button"
+            type="button"
+            data-design-open
+            aria-controls="design-examples-modal"
+            aria-expanded="false"
+          >
+            <span class="timeline-kicker">Design</span>
+            <span class="timeline-title">Shape the solution</span>
+            <span class="timeline-copy">Build requirements, reporting models, support workflows, and procurement-ready recommendations.</span>
+            <span class="timeline-action">View slide and chart examples</span>
+          </button>
+          <button
+            class="timeline-card timeline-card-button"
+            type="button"
+            data-deliver-open
+            aria-controls="deliver-examples-modal"
+            aria-expanded="false"
+          >
+            <span class="timeline-kicker">Deliver</span>
+            <span class="timeline-title">Make it usable</span>
+            <span class="timeline-copy">Hand off clear documentation, dashboards, vendor guidance, and practical implementation support.</span>
+            <span class="timeline-action">View slide and chart examples</span>
+          </button>
         </div>
       </section>
+
+      <div class="deliverable-modal" id="discover-examples-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="discover-examples-title">
+        <div class="deliverable-modal-backdrop" data-discover-close></div>
+        <div class="deliverable-modal-panel" role="document">
+          <button class="deliverable-modal-close" type="button" data-discover-close aria-label="Close discover examples">×</button>
+          <div class="deliverable-modal-header">
+            <p class="eyebrow">Deliverable examples</p>
+            <h2 id="discover-examples-title">Discover: map the current state</h2>
+            <p>
+              These are example slides and charts that show how the discovery phase can be packaged for stakeholders.
+            </p>
+          </div>
+
+          <div class="deliverable-examples">
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Slide 01</span>
+                <strong>Current state snapshot</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Slide example showing current state snapshot">
+                <defs>
+                  <linearGradient id="snapshotBars" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0e7c86" />
+                    <stop offset="100%" stop-color="#102a43" />
+                  </linearGradient>
+                </defs>
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="17" font-weight="700">System coverage by function</text>
+                <text x="28" y="65" fill="#65717c" font-size="10" letter-spacing="1.2">sample deliverable view</text>
+                <line x1="28" y1="202" x2="492" y2="202" stroke="#d9e2e7" />
+                <rect x="44" y="122" width="44" height="80" rx="8" fill="url(#snapshotBars)" />
+                <rect x="118" y="92" width="44" height="110" rx="8" fill="url(#snapshotBars)" />
+                <rect x="192" y="150" width="44" height="52" rx="8" fill="url(#snapshotBars)" />
+                <rect x="266" y="70" width="44" height="132" rx="8" fill="url(#snapshotBars)" />
+                <rect x="340" y="112" width="44" height="90" rx="8" fill="url(#snapshotBars)" />
+                <rect x="414" y="138" width="44" height="64" rx="8" fill="url(#snapshotBars)" />
+                <text x="42" y="227" fill="#65717c" font-size="10">ERP</text>
+                <text x="116" y="227" fill="#65717c" font-size="10">CRM</text>
+                <text x="186" y="227" fill="#65717c" font-size="10">Support</text>
+                <text x="261" y="227" fill="#65717c" font-size="10">Finance</text>
+                <text x="337" y="227" fill="#65717c" font-size="10">Ops</text>
+                <text x="406" y="227" fill="#65717c" font-size="10">Reporting</text>
+              </svg>
+            </article>
+
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Chart 02</span>
+                <strong>Pain points and manual work</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Chart example showing pain points and manual work by process area">
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="17" font-weight="700">Pain points by process area</text>
+                <text x="28" y="65" fill="#65717c" font-size="10" letter-spacing="1.2">sample discovery heat map</text>
+                <rect x="28" y="94" width="136" height="124" rx="14" fill="#0e7c8612" />
+                <rect x="182" y="94" width="136" height="124" rx="14" fill="#c8933512" />
+                <rect x="336" y="94" width="136" height="124" rx="14" fill="#102a4312" />
+                <circle cx="96" cy="139" r="28" fill="#0e7c86" opacity="0.9" />
+                <circle cx="250" cy="139" r="20" fill="#c89335" opacity="0.9" />
+                <circle cx="404" cy="139" r="34" fill="#102a43" opacity="0.9" />
+                <text x="96" y="193" fill="#14212b" font-size="11" text-anchor="middle">Manual handoffs</text>
+                <text x="250" y="193" fill="#14212b" font-size="11" text-anchor="middle">Reporting delays</text>
+                <text x="404" y="193" fill="#14212b" font-size="11" text-anchor="middle">Tool sprawl</text>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverable-modal" id="design-examples-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="design-examples-title">
+        <div class="deliverable-modal-backdrop" data-design-close></div>
+        <div class="deliverable-modal-panel" role="document">
+          <button class="deliverable-modal-close" type="button" data-design-close aria-label="Close design examples">×</button>
+          <div class="deliverable-modal-header">
+            <p class="eyebrow">Deliverable examples</p>
+            <h2 id="design-examples-title">Design: shape the solution</h2>
+            <p>
+              These examples show how the design phase turns discovery findings into a concrete solution plan.
+            </p>
+          </div>
+
+          <div class="deliverable-examples">
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Slide 01</span>
+                <strong>Future-state workflow</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Slide example showing a future state workflow">
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="18" font-weight="700">Future-state workflow</text>
+                <text x="28" y="66" fill="#65717c" font-size="11" letter-spacing="1.4">sample solution slide</text>
+                <rect x="44" y="110" width="108" height="56" rx="14" fill="#0e7c8616" stroke="#0e7c86" />
+                <rect x="206" y="86" width="108" height="56" rx="14" fill="#102a4316" stroke="#102a43" />
+                <rect x="368" y="110" width="108" height="56" rx="14" fill="#c8933516" stroke="#c89335" />
+                <text x="98" y="141" fill="#14212b" font-size="12" text-anchor="middle">Intake</text>
+                <text x="260" y="117" fill="#14212b" font-size="12" text-anchor="middle">Review</text>
+                <text x="422" y="141" fill="#14212b" font-size="12" text-anchor="middle">Action</text>
+                <path d="M152 138H198" stroke="#65717c" stroke-width="2" stroke-dasharray="5 5" />
+                <path d="M314 138H360" stroke="#65717c" stroke-width="2" stroke-dasharray="5 5" />
+                <circle cx="175" cy="138" r="6" fill="#0e7c86" />
+                <circle cx="337" cy="138" r="6" fill="#102a43" />
+                <text x="260" y="198" fill="#65717c" font-size="12" text-anchor="middle">support workflows, decision gates, and automation points</text>
+              </svg>
+            </article>
+
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Chart 02</span>
+                <strong>Requirements and priority map</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Chart example showing requirements priority by impact and effort">
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="17" font-weight="700">Requirements priority map</text>
+                <text x="28" y="65" fill="#65717c" font-size="10" letter-spacing="1.2">sample design matrix</text>
+                <line x1="88" y1="198" x2="464" y2="198" stroke="#d9e2e7" />
+                <line x1="88" y1="198" x2="88" y2="74" stroke="#d9e2e7" />
+                <text x="264" y="239" fill="#65717c" font-size="10" text-anchor="middle">Effort</text>
+                <text x="48" y="140" fill="#65717c" font-size="11" text-anchor="middle" transform="rotate(-90 48 140)">Impact</text>
+                <circle cx="138" cy="166" r="18" fill="#0e7c86" opacity="0.9" />
+                <circle cx="246" cy="132" r="24" fill="#102a43" opacity="0.9" />
+                <circle cx="352" cy="106" r="15" fill="#c89335" opacity="0.9" />
+                <circle cx="440" cy="152" r="21" fill="#4f8f63" opacity="0.9" />
+                <text x="138" y="207" fill="#14212b" font-size="9" text-anchor="middle">Reporting</text>
+                <text x="138" y="219" fill="#14212b" font-size="9" text-anchor="middle">model</text>
+                <text x="246" y="197" fill="#14212b" font-size="9" text-anchor="middle">Workflow</text>
+                <text x="246" y="209" fill="#14212b" font-size="9" text-anchor="middle">redesign</text>
+                <text x="352" y="207" fill="#14212b" font-size="9" text-anchor="middle">Automation</text>
+                <text x="440" y="207" fill="#14212b" font-size="9" text-anchor="middle">Vendor scope</text>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverable-modal" id="deliver-examples-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="deliver-examples-title">
+        <div class="deliverable-modal-backdrop" data-deliver-close></div>
+        <div class="deliverable-modal-panel" role="document">
+          <button class="deliverable-modal-close" type="button" data-deliver-close aria-label="Close deliver examples">×</button>
+          <div class="deliverable-modal-header">
+            <p class="eyebrow">Deliverable examples</p>
+            <h2 id="deliver-examples-title">Deliver: make it usable</h2>
+            <p>
+              These examples show how the delivery phase turns the solution into something teams can adopt and sustain.
+            </p>
+          </div>
+
+          <div class="deliverable-examples">
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Slide 01</span>
+                <strong>Implementation roadmap</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Slide example showing an implementation roadmap">
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="17" font-weight="700">Implementation roadmap</text>
+                <text x="28" y="65" fill="#65717c" font-size="10" letter-spacing="1.2">sample delivery slide</text>
+                <line x1="56" y1="132" x2="464" y2="132" stroke="#d9e2e7" stroke-width="2" />
+                <circle cx="100" cy="132" r="16" fill="#0e7c86" />
+                <circle cx="220" cy="132" r="16" fill="#102a43" />
+                <circle cx="340" cy="132" r="16" fill="#c89335" />
+                <circle cx="440" cy="132" r="16" fill="#4f8f63" />
+                <rect x="74" y="166" width="52" height="28" rx="7" fill="#0e7c8616" />
+                <rect x="194" y="166" width="52" height="28" rx="7" fill="#102a4316" />
+                <rect x="314" y="166" width="52" height="28" rx="7" fill="#c8933516" />
+                <rect x="414" y="166" width="52" height="28" rx="7" fill="#4f8f6316" />
+                <text x="100" y="184" fill="#14212b" font-size="10" text-anchor="middle">Week 1</text>
+                <text x="220" y="184" fill="#14212b" font-size="10" text-anchor="middle">Week 2</text>
+                <text x="340" y="184" fill="#14212b" font-size="10" text-anchor="middle">Week 3</text>
+                <text x="440" y="184" fill="#14212b" font-size="10" text-anchor="middle">Week 4</text>
+                <text x="260" y="220" fill="#65717c" font-size="11" text-anchor="middle">tasks, owners, and checkpoints for adoption</text>
+              </svg>
+            </article>
+
+            <article class="deliverable-example">
+              <div class="deliverable-example-meta">
+                <span>Chart 02</span>
+                <strong>Adoption and readiness view</strong>
+              </div>
+              <svg viewBox="0 0 520 260" class="deliverable-chart" aria-label="Chart example showing adoption readiness by team">
+                <rect width="520" height="260" rx="18" fill="#f7faf9" />
+                <text x="28" y="42" fill="#14212b" font-size="17" font-weight="700">Adoption readiness</text>
+                <text x="28" y="65" fill="#65717c" font-size="10" letter-spacing="1.2">sample delivery chart</text>
+                <line x1="84" y1="198" x2="468" y2="198" stroke="#d9e2e7" />
+                <line x1="84" y1="198" x2="84" y2="78" stroke="#d9e2e7" />
+                <rect x="110" y="126" width="60" height="72" rx="10" fill="#0e7c86" opacity="0.9" />
+                <rect x="210" y="104" width="60" height="94" rx="10" fill="#102a43" opacity="0.9" />
+                <rect x="310" y="82" width="60" height="116" rx="10" fill="#c89335" opacity="0.9" />
+                <rect x="410" y="138" width="60" height="60" rx="10" fill="#4f8f63" opacity="0.9" />
+                <text x="140" y="222" fill="#14212b" font-size="11" text-anchor="middle">Training</text>
+                <text x="240" y="222" fill="#14212b" font-size="11" text-anchor="middle">Data setup</text>
+                <text x="340" y="222" fill="#14212b" font-size="11" text-anchor="middle">Go-live</text>
+                <text x="440" y="222" fill="#14212b" font-size="11" text-anchor="middle">Support</text>
+                <text x="48" y="140" fill="#65717c" font-size="11" text-anchor="middle" transform="rotate(-90 48 140)">Readiness</text>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </div>
 
       <section class="clients section" id="clients">
         <div class="section-copy">
@@ -227,8 +502,8 @@
 
       <section class="contact" id="contact">
         <div>
-          <p class="eyebrow">Start with the problem in front of you</p>
-          <h2>Tell us what needs to become clearer, faster, or easier to manage.</h2>
+          <p class="eyebrow">Start Charting Your Course Today</p>
+          <h2>Contact us and schedule an assessment.</h2>
         </div>
         <form class="contact-form" action="mailto:info@axiscoreit.com" method="post" enctype="text/plain">
           <label>
@@ -246,6 +521,66 @@
           <button class="button primary" type="submit">Send Inquiry</button>
         </form>
       </section>
+
+      <div class="modal" id="bi-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bi-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close Business Intelligence details">×</button>
+          <h2 id="bi-modal-title">Business Intelligence</h2>
+          <ul>
+            <li>KPI dashboard planning</li>
+            <li>Leadership reporting structure</li>
+            <li>Data source review</li>
+            <li>Performance tracking</li>
+            <li>Decision-ready visual reporting</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal" id="da-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="da-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close Data Analytics details">×</button>
+          <h2 id="da-modal-title">Data Analytics</h2>
+          <ul>
+            <li>Data cleanup and normalization</li>
+            <li>Workflow and process analysis</li>
+            <li>Trend review and anomaly spotting</li>
+            <li>Operational insight summaries</li>
+            <li>Practical recommendations from data</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal" id="it-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="it-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close IT Support details">×</button>
+          <h2 id="it-modal-title">IT Support</h2>
+          <ul>
+            <li>Helpdesk and user support planning</li>
+            <li>Documentation and knowledge base setup</li>
+            <li>Process improvement and issue triage</li>
+            <li>System reliability and maintenance workflows</li>
+            <li>Escalation and response coordination</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal" id="pr-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pr-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close Procurement Support details">×</button>
+          <h2 id="pr-modal-title">Procurement Support</h2>
+          <ul>
+            <li>Requirements definition and scope shaping</li>
+            <li>Vendor evaluation support</li>
+            <li>Statement-of-work inputs</li>
+            <li>Readiness and risk review</li>
+            <li>Procurement documentation support</li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
