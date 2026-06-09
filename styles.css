@@ -423,7 +423,7 @@ h1 {
   white-space: nowrap;
   transform: translateX(-50%);
   opacity: 0;
-  animation: fadeUpCentered 1s ease 2s forwards;
+  animation: fadeUpCentered 2s ease 3s forwards;
 }
 
 .stat {
@@ -452,35 +452,6 @@ h1 {
   background: #1a3f55;
 }
 
-.scroll-hint {
-  position: absolute;
-  z-index: 10;
-  bottom: 24px;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  color: #2a5570;
-  transform: translateX(-50%);
-  opacity: 0;
-  animation: fadeUpCentered 1s ease 2.2s forwards;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 28px;
-  background: linear-gradient(to bottom, #2a5570, transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-
-.scroll-hint span:last-child {
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
 .bottom-strip {
   position: absolute;
   right: 0;
@@ -488,17 +459,6 @@ h1 {
   left: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, #1e4a62, transparent);
-}
-
-@keyframes scrollPulse {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 0.9;
-  }
 }
 
 @keyframes fadeUp {
@@ -925,12 +885,6 @@ textarea {
 
 .hero-actions {
   margin-bottom: 3rem;
-}
-
-.stat-row {
-  margin-top: 3rem;
-  position: relative;
-  z-index: 5;
 }
 
 .hero-actions {
