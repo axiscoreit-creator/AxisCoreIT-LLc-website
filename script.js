@@ -5,7 +5,13 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const updateHeader = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 16);
 };
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 

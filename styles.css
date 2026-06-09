@@ -919,11 +919,24 @@ textarea {
     min-height: 100svh;
     padding: 0;
   }
+.hero-content {
+  padding-bottom: 7rem;
+}
 
-  .hero-content {
-    padding: 104px 18px 170px;
-  }
+.hero-actions {
+  margin-bottom: 3rem;
+}
 
+.stat-row {
+  margin-top: 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-actions {
+  position: relative;
+  z-index: 6;
+}
   .hero-logo {
     width: clamp(150px, 44vw, 220px);
     margin-bottom: 14px;
