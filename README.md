@@ -76,7 +76,7 @@ Development Workflow
 
 Contact
 
-Website: https://axiscoreit.com
+Website: https://axiscoreit.tech
 
 Email: info@axiscoreit.tech
 
